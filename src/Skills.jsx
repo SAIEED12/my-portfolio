@@ -38,6 +38,18 @@ const Skills = () => {
       color:
         "hover:shadow-[0_0_20px_rgba(51,153,102,0.3)] hover:border-[#339966]",
     },
+    {
+      name: "Next.js",
+      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg",
+      color:
+        "hover:shadow-[0_0_20px_rgba(255,255,255,0.15)] hover:border-white/60",
+    },
+    {
+      name: "MongoDB",
+      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg",
+      color:
+        "hover:shadow-[0_0_20px_rgba(0,237,100,0.3)] hover:border-[#00ed64]",
+    },
   ];
 
   return (
@@ -48,15 +60,14 @@ const Skills = () => {
           My <span className="text-cyan-400">Skills</span>
         </h2>
         <p className="text-gray-400 text-sm md:text-base max-w-xl mx-auto mb-16 leading-relaxed">
-          As a Developer, I specialize in building responsive,
-          high-performance web applications. Below are the core technologies and
-          modern tools I leverage to turn complex designs into functional,
-          user-centric digital experiences.
+          As a Developer, I specialize in building responsive, high-performance
+          web applications. Below are the core technologies and modern tools I
+          leverage to turn complex designs into functional, user-centric digital
+          experiences.
         </p>
 
         {/* Skills Container */}
         <div className="relative">
-
           <div className="absolute inset-0 bg-cyan-500/5 blur-[120px] rounded-full -z-10"></div>
 
           <div className="flex flex-wrap justify-center items-center gap-6 md:gap-10 bg-[#161b22]/40 p-10 rounded-3xl backdrop-blur-xl border border-white/10 shadow-inner ">
@@ -65,7 +76,6 @@ const Skills = () => {
                 key={index}
                 className={`group relative w-24 h-24 flex items-center justify-center bg-[#1c2128] rounded-2xl border border-white/5 transition-all duration-500 hover:-translate-y-3 cursor-pointer ${skill.color}`}
               >
-
                 <img
                   src={skill.icon}
                   alt={skill.name}

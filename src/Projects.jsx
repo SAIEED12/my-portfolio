@@ -4,20 +4,41 @@ const Projects = () => {
   const projectData = [
     {
       id: 1,
+      title: "KinKeeper",
+      image: "/kinkeeper.jpg",
+      liveLink: "https://kinkeeper-tau.vercel.app/",
+      github: "https://github.com/SAIEED12/A07-KinKeeper",
+    },
+    {
+      id: 2,
+      title: "DigiTools",
+      image: "/digitools.jpg",
+      liveLink: "https://digitools-t.vercel.app/",
+      github: "https://github.com/SAIEED12/A06-DigiTools",
+    },
+    {
+      id: 3,
+      title: "PH-Playstore",
+      image: "/phPlaystore.jpg",
+      liveLink: "https://ph-play-store-one.vercel.app/",
+      github: "https://github.com/SAIEED12/PH-Play_Store",
+    },
+    {
+      id: 4,
       title: "BPL-Dream-11",
       image: "/Screenshot_1.jpg",
       liveLink: "https://bpl-dream-11-demo.netlify.app/",
       github: "https://github.com/SAIEED12/BPL-Dream-11",
     },
     {
-      id: 2,
+      id: 5,
       title: "GitHub Issues Tracker",
       image: "/Screenshot_2.jpg",
       liveLink: "https://github-issue-tracker-demo.netlify.app/",
       github: "https://github.com/saieed12",
     },
     {
-      id: 3,
+      id: 6,
       title: "Job Application Tracker",
       image: "/Screenshot_3.jpg",
       liveLink: "https://saieed12.github.io/A04-Job-Tracker/",
