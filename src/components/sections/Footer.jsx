@@ -25,7 +25,7 @@ export default function Footer() {
           {/* Column 1: Logo & Description */}
           <div className="flex flex-col gap-4">
             <div className="w-12 h-12 rounded-xl bg-[var(--color-accent)]/10 flex items-center justify-center border border-[var(--color-accent)]/20">
-              <span className="text-xl font-bold text-[var(--color-accent)]">S</span>
+              <span className="text-xl font-bold text-[var(--color-accent)]">AS</span>
             </div>
             <p className="text-sm text-[var(--color-text-secondary)] leading-relaxed max-w-sm">
               Professional Full Stack Developer dedicated to crafting immersive, high-performance digital experiences with cutting-edge technology.

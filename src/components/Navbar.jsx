@@ -68,7 +68,7 @@ export default function Navbar() {
           >
             <div className="w-8 h-8 rounded-lg bg-[#00E5FF] flex items-center justify-center group-hover:shadow-[0_0_20px_rgba(0,229,255,0.4)] transition-all duration-300">
               <span className="text-[#0a0a0a] font-black text-sm leading-none">
-                S
+                AS
               </span>
             </div>
             <span className="text-lg font-bold tracking-[0.08em] text-white/90 group-hover:text-white transition-colors">
@@ -177,7 +177,7 @@ export default function Navbar() {
                 <div className="flex items-center gap-2">
                   <div className="w-8 h-8 rounded-lg bg-[#00E5FF] flex items-center justify-center">
                     <span className="text-[#0a0a0a] font-black text-sm leading-none">
-                      S
+                      AS
                     </span>
                   </div>
                   <span className="text-lg font-bold tracking-[0.08em] text-white/90">
