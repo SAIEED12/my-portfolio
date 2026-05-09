@@ -27,7 +27,7 @@ export const projects = [
     tech: ["Next.js", "React", "DaisyUI", "Chart.js"],
     liveLink: "https://kinkeeper-tau.vercel.app",
     github: "https://github.com/SAIEED12/A07-KinKeeper",
-    image: "/KinKeeper.jpg",
+    image: "/kinkeeper.jpg",
   },
   {
     id: 4,
@@ -37,6 +37,6 @@ export const projects = [
     tech: ["React", "Tailwind CSS", "JavaScript", "Vercel"],
     liveLink: "https://digitools-t.vercel.app",
     github: "https://github.com/SAIEED12/A06-DigiTools",
-    image: "/DigiTools.jpg",
+    image: "/digitools.jpg",
   },
 ];
