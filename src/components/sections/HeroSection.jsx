@@ -43,6 +43,14 @@ export default function HeroSection() {
   const [roleIndex, setRoleIndex] = useState(0);
   const [displayText, setDisplayText] = useState("");
   const [isDeleting, setIsDeleting] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => setIsMobile(window.innerWidth < 1024);
+    handleResize();
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   // Typing animation
   useEffect(() => {
@@ -83,7 +91,7 @@ export default function HeroSection() {
     <section
       ref={heroRef}
       id="home"
-      className="relative min-h-screen flex items-center overflow-hidden"
+      className="relative min-h-screen flex items-start lg:items-center overflow-hidden"
     >
       {/* Background Glows */}
       <div className="absolute inset-0 pointer-events-none">
@@ -91,7 +99,7 @@ export default function HeroSection() {
         <div className="absolute bottom-[-10%] left-[-5%] w-[350px] h-[350px] bg-[#7B6EF6]/[0.04] blur-[100px] rounded-full" />
       </div>
 
-      <div className="container-main relative z-10">
+      <div className="container-main relative z-10" style={isMobile ? { paddingTop: '100px' } : {}}>
         <div className="grid lg:grid-cols-[1.2fr_1fr] items-center gap-12 lg:gap-16">
           {/* Left: Content */}
           <motion.div
