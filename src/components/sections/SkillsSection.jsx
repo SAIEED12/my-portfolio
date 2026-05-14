@@ -37,7 +37,7 @@ export default function SkillsSection() {
                       <motion.div
                         key={skill.name}
                         whileHover={{ y: -5, borderColor: "rgba(0,229,255,0.2)", backgroundColor: "rgba(255,255,255,0.03)" }}
-                        className="bg-white/[0.01] border border-white/[0.03] rounded-xl p-8 flex flex-col items-center justify-center gap-4 transition-colors duration-300"
+                        className="bg-white/[0.01] border border-white/[0.03] rounded-xl p-4 sm:p-6 md:p-8 flex flex-col items-center justify-center gap-4 transition-colors duration-300"
                       >
                         <div className="opacity-80 group-hover:opacity-100 transition-opacity">
                           <IconComp size={48} style={{ color: skill.color }} />

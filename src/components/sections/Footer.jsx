@@ -18,10 +18,10 @@ const navigation = [
 
 export default function Footer() {
   return (
-    <footer className="border-t border-white/[0.06] bg-black/20" style={{ marginTop: "4rem", paddingTop: "4rem", paddingBottom: "4rem" }}>
+    <footer className="border-t border-white/[0.06] bg-black/20 mt-16 pt-16 pb-16">
       <div className="container-main">
         {/* Top Section with 3 Columns */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-8" style={{ marginBottom: "5rem" }}>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-8 mb-20">
           {/* Column 1: Logo & Description */}
           <div className="flex flex-col gap-4">
             <div className="w-12 h-12 rounded-xl bg-[var(--color-accent)]/10 flex items-center justify-center border border-[var(--color-accent)]/20">
@@ -82,7 +82,7 @@ export default function Footer() {
         </div>
 
         {/* Bottom Section: Copyright & Credit */}
-        <div className="border-t border-white/[0.05] flex flex-col sm:flex-row items-center justify-between gap-4" style={{ paddingTop: "3rem" }}>
+        <div className="border-t border-white/[0.05] flex flex-col sm:flex-row items-center justify-between gap-4 pt-12">
           <p className="text-xs text-[var(--color-text-muted)]">
             © 2026 Abu Saieed. All rights reserved.
           </p>

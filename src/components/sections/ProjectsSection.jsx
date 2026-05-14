@@ -48,21 +48,20 @@ export default function ProjectsSection() {
                 </div>
 
                 {/* Content */}
-                <div style={{ padding: "2rem", display: "flex", flexDirection: "column", height: "100%" }}>
+                <div className="p-5 sm:p-6 md:p-8 flex flex-col h-full">
                   <h3 className="text-lg font-bold text-[var(--color-text)] mb-4">
                     {project.title}
                   </h3>
-                  <p style={{ marginBottom: "2rem" }} className="text-sm text-[var(--color-text-secondary)] leading-relaxed line-clamp-3">
+                  <p className="text-sm text-[var(--color-text-secondary)] leading-relaxed line-clamp-3 mb-8">
                     {project.description}
                   </p>
 
                   {/* Tech pills */}
-                  <div style={{ marginBottom: "2rem" }} className="flex flex-wrap gap-3">
+                  <div className="flex flex-wrap gap-3 mb-8">
                     {project.tech.map((t) => (
                       <span
                         key={t}
-                        style={{ padding: "0.4rem 1rem" }}
-                        className="text-[10px] font-mono uppercase tracking-wider rounded-full bg-white/[0.04] border border-white/[0.06] text-[var(--color-text-muted)]"
+                        className="text-[10px] font-mono uppercase tracking-wider rounded-full bg-white/[0.04] border border-white/[0.06] text-[var(--color-text-muted)] py-1.5 px-4"
                       >
                         {t}
                       </span>
@@ -100,7 +99,7 @@ export default function ProjectsSection() {
 
         {/* View All Button */}
         <FramerReveal delay={0.4}>
-          <div style={{ marginTop: "4rem" }} className="flex justify-center">
+          <div className="flex justify-center mt-16">
             <a
               href="https://github.com/SAIEED12?tab=repositories"
               target="_blank"

@@ -53,10 +53,7 @@ export default function AboutSection() {
             
             <FramerReveal delay={0.2}>
               <div className="space-y-4">
-                <p
-                  className="text-[var(--color-text-secondary)] leading-[1.75]"
-                  style={{ textAlign: "justify" }}
-                >
+                <p className="text-[var(--color-text-secondary)] leading-[1.75]">
                   I&apos;m{" "}
                   <span className="text-gradient-cyan font-medium">
                     Abu Saieed
@@ -75,9 +72,9 @@ export default function AboutSection() {
           {/* Right: Image */}
           <FramerReveal delay={0.4}>
             <div className="relative flex items-center justify-center lg:justify-end">
-              <div className="relative w-full max-w-[500px] h-[600px] rounded-2xl overflow-hidden border border-white/[0.05] bg-[#111111]/50">
+              <div className="relative w-full max-w-[500px] h-[400px] md:h-[600px] rounded-2xl overflow-hidden border border-white/[0.05] bg-[#111111]/50">
                 <Image
-                  src="/about_me.png"
+                  src="/IMG_0989.jpg"
                   alt="Abu Saieed"
                   fill
                   className="object-contain"

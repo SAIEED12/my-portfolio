@@ -5,8 +5,9 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import MagneticButton from "@/components/MagneticButton";
 import { useLenis } from "@/components/SmoothScrollProvider";
+import { MdOutlineFileDownload } from "react-icons/md";
 
-const roles = ["Full Stack Developer", "React Enthusiast", "Next.js Builder"];
+const roles = ["MERN Stack Developer", "React ", "Next.js Builder"];
 
 const stats = [
   { value: "4+", label: "Projects" },
@@ -43,14 +44,6 @@ export default function HeroSection() {
   const [roleIndex, setRoleIndex] = useState(0);
   const [displayText, setDisplayText] = useState("");
   const [isDeleting, setIsDeleting] = useState(false);
-  const [isMobile, setIsMobile] = useState(false);
-
-  useEffect(() => {
-    const handleResize = () => setIsMobile(window.innerWidth < 1024);
-    handleResize();
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
 
   // Typing animation
   useEffect(() => {
@@ -99,7 +92,7 @@ export default function HeroSection() {
         <div className="absolute bottom-[-10%] left-[-5%] w-[350px] h-[350px] bg-[#7B6EF6]/[0.04] blur-[100px] rounded-full" />
       </div>
 
-      <div className="container-main relative z-10" style={isMobile ? { paddingTop: '100px' } : {}}>
+      <div className="container-main relative z-10 pt-[100px] lg:pt-0">
         <div className="grid lg:grid-cols-[1.2fr_1fr] items-center gap-12 lg:gap-16">
           {/* Left: Content */}
           <motion.div
@@ -132,15 +125,39 @@ export default function HeroSection() {
             </motion.div>
 
             {/* Buttons */}
-            <motion.div variants={itemVariants} className="flex flex-wrap items-center gap-4 pt-1">
-              <MagneticButton onClick={() => scrollTo("contact")}>
-                <span className="cta-primary">Get In Touch</span>
-              </MagneticButton>
+<motion.div variants={itemVariants} className="flex flex-wrap items-center gap-4 pt-1">
+  <MagneticButton onClick={() => scrollTo("contact")}>
+    <span className="cta-primary">Get In Touch</span>
+  </MagneticButton>
 
-              <MagneticButton onClick={() => scrollTo("projects")}>
-                <span className="cta-outline">View Work</span>
-              </MagneticButton>
-            </motion.div>
+  <MagneticButton onClick={() => scrollTo("projects")}>
+    <span className="cta-outline">View Work</span>
+  </MagneticButton>
+
+  {/* Resume Download Button */}
+<MagneticButton>
+  <a 
+    href="/resume.pdf" 
+    download="Abu_Saieed_Resume.pdf"
+    className="cta-outline"
+    style={{ 
+      display: 'flex', 
+      flexDirection: 'row', 
+      alignItems: 'center', 
+      justifyContent: 'center', 
+      gap: '8px',
+      paddingLeft: '24px',
+      paddingRight: '24px'
+    }}
+  >
+    
+<div className="flex items-center gap-2">
+  <MdOutlineFileDownload size={22} className="shrink-0" /> 
+  <span style={{ whiteSpace: 'nowrap' }}>Resume</span>
+</div>
+  </a>
+</MagneticButton>
+</motion.div>
 
             {/* Stats Row */}
             <motion.div variants={itemVariants} className="flex items-center gap-6 pt-3">
@@ -172,7 +189,7 @@ export default function HeroSection() {
             >
               <div className="relative w-[320px] h-[420px] sm:w-[360px] sm:h-[480px] lg:w-[420px] lg:h-[560px] rounded-[20px] overflow-hidden border border-white/[0.07]">
                 <Image
-                  src="/IMG_0989-Photoroom.png"
+                  src="/Cross Armed.png"
                   alt="Abu Saieed"
                   fill
                   className="object-cover object-top"
@@ -185,14 +202,6 @@ export default function HeroSection() {
             </motion.div>
           </div>
         </div>
-      </div>
-
-      {/* Scroll Indicator */}
-      <div className="absolute bottom-10 left-1/2 -translate-x-1/2 hidden md:flex flex-col items-center gap-3">
-        <span className="text-[9px] uppercase tracking-[0.3em] text-[var(--color-text-muted)] font-medium">
-          Scroll
-        </span>
-        <div className="w-[1px] h-12 bg-gradient-to-b from-white/20 to-transparent" />
       </div>
     </section>
   );
