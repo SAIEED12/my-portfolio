@@ -3,6 +3,7 @@ import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/sections/Footer";
 import SmoothScrollProvider from "@/components/SmoothScrollProvider";
+import GlobalGridBackground from "@/components/GlobalGridBackground";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -33,11 +34,16 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className={inter.variable}>
-      <body className="noise-overlay font-[var(--font-inter)]">
+      <body className="noise-overlay font-[var(--font-inter)] bg-[#0a0a0a] min-h-screen relative overflow-x-hidden">
+        {/* Global Tech Background Layer */}
+        <GlobalGridBackground />
+
         <SmoothScrollProvider>
-          <Navbar />
-          <main className="min-h-screen">{children}</main>
-          <Footer />
+          <div className="relative z-10">
+            <Navbar />
+            <main className="min-h-screen">{children}</main>
+            <Footer />
+          </div>
         </SmoothScrollProvider>
       </body>
     </html>

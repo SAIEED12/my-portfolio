@@ -8,6 +8,35 @@ import { FaExternalLinkAlt } from "react-icons/fa";
 export default function ProjectsSection() {
   return (
     <section id="projects" className="section-padding relative overflow-hidden">
+      {/* Background Decorative Elements */}
+      <div className="absolute inset-0 pointer-events-none select-none z-0">
+        {/* Ambient Glows */}
+        <div 
+          className="absolute"
+          style={{
+            top: '0%',
+            left: '-15%',
+            width: '700px',
+            height: '700px',
+            backgroundColor: 'rgba(0, 229, 255, 0.06)',
+            filter: 'blur(140px)',
+            borderRadius: '50%',
+          }}
+        />
+        <div 
+          className="absolute"
+          style={{
+            bottom: '5%',
+            right: '-15%',
+            width: '650px',
+            height: '650px',
+            backgroundColor: 'rgba(123, 110, 246, 0.05)',
+            filter: 'blur(140px)',
+            borderRadius: '50%',
+          }}
+        />
+      </div>
+
       <div className="container-main relative z-10">
         {/* Section Header */}
         <div className="mb-14">
@@ -114,26 +143,52 @@ export default function ProjectsSection() {
                       </svg>
                       Live
                     </a>
-                    <a
-                      href={project.github}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex items-center gap-2 text-xs font-bold text-[var(--color-text-muted)] hover:text-[#00E5FF] transition-colors uppercase tracking-widest py-1"
-                    >
-                      <svg
-                        width="14"
-                        height="14"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="currentColor"
-                        strokeWidth="2.5"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
+                    {Array.isArray(project.github) ? (
+                      project.github.map((repo) => (
+                        <a
+                          key={repo.label}
+                          href={repo.url}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="flex items-center gap-2 text-xs font-bold text-[var(--color-text-muted)] hover:text-[#00E5FF] transition-colors uppercase tracking-widest py-1"
+                        >
+                          <svg
+                            width="14"
+                            height="14"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            strokeWidth="2.5"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                          >
+                            <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" />
+                          </svg>
+                          {repo.label}
+                        </a>
+                      ))
+                    ) : (
+                      <a
+                        href={project.github}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center gap-2 text-xs font-bold text-[var(--color-text-muted)] hover:text-[#00E5FF] transition-colors uppercase tracking-widest py-1"
                       >
-                        <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" />
-                      </svg>
-                      Source Code
-                    </a>
+                        <svg
+                          width="14"
+                          height="14"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          strokeWidth="2.5"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                        >
+                          <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" />
+                        </svg>
+                        Source Code
+                      </a>
+                    )}
                   </div>
                 </div>
               </div>

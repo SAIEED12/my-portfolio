@@ -18,6 +18,7 @@
 }
 
 /* ===== Base ===== */
+@layer base {
 *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 
 html {
@@ -41,7 +42,9 @@ body {
 ::-webkit-scrollbar-track { background: transparent; }
 ::-webkit-scrollbar-thumb { background: rgba(0, 229, 255, 0.25); border-radius: 10px; }
 ::-webkit-scrollbar-thumb:hover { background: rgba(0, 229, 255, 0.45); }
+}
 
+@layer components {
 /* ===== Noise Overlay ===== */
 .noise-overlay::before {
   content: "";
@@ -300,3 +303,4 @@ body {
   border-color: rgba(255, 255, 255, 0.25) !important;
   color: #fff !important;
 }
+} /* end @layer components */

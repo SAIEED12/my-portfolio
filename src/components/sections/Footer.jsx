@@ -18,8 +18,8 @@ const navigation = [
 
 export default function Footer() {
   return (
-    <footer className="border-t border-white/[0.06] bg-black/20 mt-16 pt-16 pb-16">
-      <div className="container-main">
+    <footer className="border-t border-white/[0.06] bg-black/20 mt-24 pt-20 pb-10">
+      <div className="container-main px-12">
         {/* Top Section with 3 Columns */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-8 mb-20">
           {/* Column 1: Logo & Description */}
