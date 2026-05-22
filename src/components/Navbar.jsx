@@ -9,6 +9,7 @@ const navLinks = [
   { href: "about", label: "About" },
   { href: "projects", label: "Projects" },
   { href: "skills", label: "Skills" },
+  { href: "education", label: "Education" },
   { href: "contact", label: "Contact" },
 ];
 
@@ -46,16 +47,14 @@ export default function Navbar() {
         document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
       }
     },
-    [lenisRef]
+    [lenisRef],
   );
 
   return (
     <>
       <nav
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-          scrolled
-            ? "navbar-scrolled"
-            : "bg-transparent"
+          scrolled ? "navbar-scrolled" : "bg-transparent"
         }`}
       >
         <div className="container-main flex items-center justify-between h-[72px]">
@@ -66,14 +65,11 @@ export default function Navbar() {
             role="button"
             tabIndex={0}
           >
-            <div className="w-8 h-8 rounded-lg bg-[#00E5FF] flex items-center justify-center group-hover:shadow-[0_0_20px_rgba(0,229,255,0.4)] transition-all duration-300">
-              <span className="text-[#0a0a0a] font-black text-sm leading-none">
-                AS
-              </span>
+            <div className="font-mono text-xl font-bold tracking-tighter">
+              <span className="text-cyan-400">{"<"}</span>
+              <span className="text-white">MAS</span>
+              <span className="text-cyan-400">{"/>"}</span>
             </div>
-            <span className="text-lg font-bold tracking-[0.08em] text-white/90 group-hover:text-white transition-colors">
-              SAIEED
-            </span>
           </div>
 
           {/* Desktop Navigation */}
@@ -140,9 +136,7 @@ export default function Navbar() {
                 transition={{ duration: 0.3 }}
               />
               <motion.span
-                animate={
-                  isOpen ? { rotate: -45, y: -6 } : { rotate: 0, y: 0 }
-                }
+                animate={isOpen ? { rotate: -45, y: -6 } : { rotate: 0, y: 0 }}
                 className="block w-5 h-[1.5px] bg-white/80 origin-center"
                 transition={{ duration: 0.3 }}
               />
@@ -174,16 +168,13 @@ export default function Navbar() {
             >
               {/* Drawer header - mirrors navbar */}
               <div className="container-main flex items-center justify-between h-[72px]">
-                <div className="flex items-center gap-2">
-                  <div className="w-8 h-8 rounded-lg bg-[#00E5FF] flex items-center justify-center">
-                    <span className="text-[#0a0a0a] font-black text-sm leading-none">
-                      AS
-                    </span>
-                  </div>
-                  <span className="text-lg font-bold tracking-[0.08em] text-white/90">
-                    SAIEED
-                  </span>
-                </div>
+            {/* logo      */}
+            <div className="font-mono text-xl font-bold tracking-tighter">
+              <span className="text-cyan-400">{"<"}</span>
+              <span className="text-white">MAS</span>
+              <span className="text-cyan-400">{"/>"}</span>
+            </div>
+  
                 <div
                   onClick={() => setIsOpen(false)}
                   className="w-10 h-10 flex items-center justify-center cursor-pointer rounded-lg hover:bg-white/[0.05] transition-colors"
