@@ -7,7 +7,7 @@ const socials = [
   { name: "GitHub", href: "https://github.com/SAIEED12", icon: FiGithub },
   {
     name: "LinkedIn",
-    href: "https://linkedin.com/in/mdabusaieed",
+    href: "http://www.linkedin.com/in/abusaieed0",
     icon: FiLinkedin,
   },
   {
