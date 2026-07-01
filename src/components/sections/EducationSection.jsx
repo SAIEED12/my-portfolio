@@ -9,16 +9,6 @@ const educationData = [
     institution: "American International University - Bangladesh (AIUB)",
     period: "2023 — Present",
     details: "Focused on Software Engineering, Object-Oriented Design, Database Management, and Full-Stack Development. Maintaining a strong academic record while building production-grade web applications.",
-  },
-  {
-    degree: "Higher Secondary Certificate (HSC)",
-    institution: "Dhaka Commerce College",
-    period: "2020 — 2022",
-  },
-  {
-    degree: "Secondary School Certificate (SSC)",
-    institution: "Government Rupnagar Model School & College",
-    period: "2020",
   }
 ];
 
