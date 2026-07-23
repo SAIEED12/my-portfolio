@@ -42,7 +42,7 @@ export default function ProjectsSection() {
         <div className="mb-14">
           <FramerReveal>
             <h2 className="section-heading">
-              Things I&apos;ve <span className="text-gradient-cyan">Built</span>
+              My<span className="text-gradient-cyan">Projects</span>
             </h2>
           </FramerReveal>
         </div>
