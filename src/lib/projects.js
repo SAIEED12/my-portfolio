@@ -1,6 +1,16 @@
 export const projects = [
   {
     id: 1,
+    title: "Joint Guard Landing Page",
+    description:
+      "A landing page for Joint Guard, a medicine for osteoarthritis.",
+    tech: ["Next.js", "Express.js", "Node.js", "MongoDB", "Recharts"],
+    liveLink: "#",
+    github: "#",
+    image: "/jgLandingPage.jpg",
+  },
+  {
+    id: 2,
     title: "NestFinder",
     description: "NestFinder is a modern, full-featured web application designed to simplify the process of finding and managing rental properties. It features browsing, searching, and booking rental accommodations.",
     tech: ["Next.js","Express.js", "Node.js", "MongoDB", "Better Auth", "Tailwind CSS", "Recharts"],
@@ -12,7 +22,7 @@ export const projects = [
     image: "/nestFinder.jpg",
   },
   {
-    id: 2,
+    id: 3,
     title: "MediQueue",
     description:
       "A smart tutor session and queue management system featuring real-time slot tracking, verified token handshakes, full responsive themes, and kinetic smooth scrolling.",
@@ -25,7 +35,7 @@ export const projects = [
     image: "/mediQueue.jpg",
   },
   {
-    id: 3,
+    id: 4,
     title: "Tiles Gallery",
     description:
       "A premium tile browsing platform with curated collections, real-time search, authentication via Better Auth, favourites, and a stunning dark gold aesthetic.",
@@ -34,15 +44,18 @@ export const projects = [
     github: "https://github.com/SAIEED12/A08-TilesGallery",
     image: "/TilesGallery.jpg",
   },
-  {
-    id: 4,
-    title: "Dragon News",
-    description:
-      "A news aggregation platform built with Next.js featuring Better Auth authentication, dynamic news categories, bookmarking, and a clean reading experience.",
-    tech: ["Next.js", "Node.js", "MongoDB", "Better Auth", "Tailwind CSS"],
-    liveLink: "https://dragon-news-better-auth.vercel.app",
-    github: "https://github.com/SAIEED12/dragon-news-better-auth",
-    image: "/DragonNews.jpg",
-  },
+
+  
+
+  // {
+  //   id: 4,
+  //   title: "Dragon News",
+  //   description:
+  //     "A news aggregation platform built with Next.js featuring Better Auth authentication, dynamic news categories, bookmarking, and a clean reading experience.",
+  //   tech: ["Next.js", "Node.js", "MongoDB", "Better Auth", "Tailwind CSS"],
+  //   liveLink: "https://dragon-news-better-auth.vercel.app",
+  //   github: "https://github.com/SAIEED12/dragon-news-better-auth",
+  //   image: "/DragonNews.jpg",
+  // },
 
 ];
