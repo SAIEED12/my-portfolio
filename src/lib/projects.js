@@ -5,8 +5,8 @@ export const projects = [
     description:
       "A landing page for Joint Guard, a medicine for osteoarthritis.",
     tech: ["Next.js", "Express.js", "Node.js", "MongoDB", "Recharts"],
-    liveLink: "#",
-    github: "#",
+    liveLink: "https://tahdith-shop-jg.vercel.app",
+    github: "https://github.com/SAIEED12/JG-Landing-Page",
     image: "/jgLandingPage.jpg",
   },
   {
